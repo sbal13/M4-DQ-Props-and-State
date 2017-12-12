@@ -1,5 +1,4 @@
 import React from 'react'
-import {Menu, Icon} from 'semantic-ui-react';
 
 
 const MenuBar = ({changeSelected, selected}) => {
@@ -8,33 +7,33 @@ const MenuBar = ({changeSelected, selected}) => {
 		changeSelected(event.target.id)
 	}
 
+	return (
+      <div className="ui four item menu">
+            <a className={"item " + (selected==="profile" ? "active" : null)} 
+                  id="profile" 
+                  onClick={handleClick}>
+                  <i className="user large icon"/>
+            </a>
 
+            <a className={"item " + (selected==="photo" ? "active" : null)} 
+                  id="photo"
+                  onClick={handleClick}>
+                  <i className="photo large icon"/>
+            </a>
 
-	return <Menu widths={4}>
-            <Menu.Item onClick={handleClick} 
-            		   active={selected === "profile"}
-            		   id="profile">
-            		  	<Icon size = "large" name="user"/>
-            </Menu.Item>
+            <a className={"item " + (selected==="cocktail" ? "active" : null)} 
+                  id="cocktail"
+                  onClick={handleClick}>
+                  <i className="cocktail large icon"/>
+            </a>
 
-            <Menu.Item onClick={handleClick} 
-            		   active={selected === "photo"} 
-            		   id="photo">
-            		   <Icon size = "large" name="photo"/>
-            </Menu.Item>
-
-            <Menu.Item onClick={handleClick} 
-            		   active={selected === "cocktail"} 
-            		   id="cocktail">
-            		   <Icon size = "large" name="cocktail"/>
-            </Menu.Item>
-
-            <Menu.Item onClick={handleClick} 
-            		   active={selected === "pokemon"}
-            		   id="pokemon"> 
-            		   <Icon size = "large" name="theme isle"/>
-            </Menu.Item>
-          </Menu>
+            <a className={"item " + (selected==="pokemon" ? "active" : null)} 
+                  id="pokemon"
+                  onClick={handleClick}> 
+                  <i className=" themeisle large icon"/>
+            </a>
+      </div>
+      )
 
 }
 
