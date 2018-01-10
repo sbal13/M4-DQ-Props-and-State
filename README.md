@@ -5,7 +5,7 @@ Get together in groups and clone down this repository. For the purposes of this 
 Reference-style: 
 ![alt text][example]
 
-[example]: ./M4-DQ-example.gif "final"
+[example]: ./public/M4-DQ-example.gif "final"
 
 
 A few things to think about:
